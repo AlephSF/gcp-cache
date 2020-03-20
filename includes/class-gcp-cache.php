@@ -152,7 +152,7 @@ class Gcp_Cache {
 
 		$plugin_headers = new Gcp_Cache_Headers( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_filter( 'wp_headers', $plugin_headers, 'set_cache_headers' );
+		$this->loader->add_action( 'wp', $plugin_headers, 'set_cache_headers' );
 	}
 
 	/**

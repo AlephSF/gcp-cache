@@ -58,12 +58,12 @@ class Gcp_Cache_Headers {
 	 */
 	public function set_cache_headers( $headers ) {
 		$front_end_cache_time = GCP_CACHE_SECONDS ?: 600;
-		if (is_admin() || is_user_logged_in() || post_password_required()) {
-			$headers['Cache-Control'] = 'no-cache, must-revalidate, max-age=0';
+		global $post;
+		if (is_admin() || is_user_logged_in() || $post->post_password) {
+			header('Cache-Control: no-cache, must-revalidate, max-age=0');
 		} else {
-			$headers['Cache-Control'] = 'public, s-maxage=' . $front_end_cache_time;
+			header('Cache-Control: public, s-maxage=' . $front_end_cache_time);
 		}
-		return $headers;
 	}
 
 }
