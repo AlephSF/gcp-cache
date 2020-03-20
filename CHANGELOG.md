@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/AlephSF/gcp-cache/compare/v0.0.3...v0.0.4) (2020-03-20)
+
+
+### Bug Fixes
+
+* Conditional headers on wp hook ([d44e661](https://github.com/AlephSF/gcp-cache/commit/d44e661f44cdce7ec96b2c7d48edd5c5fcaba69d))
+
 ### [0.0.3](https://github.com/AlephSF/gcp-cache/compare/v0.0.2...v0.0.3) (2020-03-20)
 
 
