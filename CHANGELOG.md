@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/AlephSF/gcp-cache/compare/v0.0.4...v0.0.5) (2020-03-30)
+
+
+### Bug Fixes
+
+* Add ability to not cache with custom field ([5a10dcc](https://github.com/AlephSF/gcp-cache/commit/5a10dccb5b797898ab13fe2fbe402c37deeebae5))
+
 ### [0.0.4](https://github.com/AlephSF/gcp-cache/compare/v0.0.3...v0.0.4) (2020-03-20)
 
 
