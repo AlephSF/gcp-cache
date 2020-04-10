@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/AlephSF/gcp-cache/compare/v0.0.5...v0.0.6) (2020-04-10)
+
+
+### Features
+
+* Add host to cache clear ([671b174](https://github.com/AlephSF/gcp-cache/commit/671b17406263d2f8e01f70e4e909d6d039af9ff4))
+
 ### [0.0.5](https://github.com/AlephSF/gcp-cache/compare/v0.0.4...v0.0.5) (2020-03-30)
 
 
