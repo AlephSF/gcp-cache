@@ -85,6 +85,7 @@ class Gcp_Cache_Api_Wrapper {
 		$url_parts = parse_url(get_permalink($post_id));
 		
 		$request_body = new Google_Service_Compute_CacheInvalidationRule();
+		$request_body->host = GCP_CACHE_HOST ?: $url_parts['host'];
 		$request_body->path = $url_parts['path'];
 		try {
 			$response = $this->service->urlMaps->invalidateCache(GCP_CACHE_PROJECT, $url_map_name, $request_body);
