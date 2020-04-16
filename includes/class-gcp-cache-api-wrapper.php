@@ -115,6 +115,18 @@ class Gcp_Cache_Api_Wrapper {
 			$url_map_name = $this->get_url_map_name();
 			$response = $this->service->urlMaps->invalidateCache(GCP_CACHE_PROJECT, $url_map_name, $request_body);
 		}
+
+		// Clear home page on post saves
+		if($post->post_type === 'post'){
+			$request_body->path = '/';
+
+			try {
+				$response = $this->service->urlMaps->invalidateCache(GCP_CACHE_PROJECT, $url_map_name, $request_body);
+			} catch (Exception $e) {
+				$url_map_name = $this->get_url_map_name();
+				$response = $this->service->urlMaps->invalidateCache(GCP_CACHE_PROJECT, $url_map_name, $request_body);
+			}
+		}
 	}
 
 }
