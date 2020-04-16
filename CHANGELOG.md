@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/AlephSF/gcp-cache/compare/v0.0.6...v0.0.7) (2020-04-16)
+
+
+### Bug Fixes
+
+* **headers:** Only try to set headers on frontend ([251c949](https://github.com/AlephSF/gcp-cache/commit/251c949b49e28c6b38332fcb668eeaa0250d6816))
+* **invalidation:** Make sure host has a fallback ([6822dff](https://github.com/AlephSF/gcp-cache/commit/6822dff013fe14abba45673b44b22297bed2cd85))
+* **post type:** Only clear caches on public cpts ([9c369c4](https://github.com/AlephSF/gcp-cache/commit/9c369c425664cded1d1c2feb2b527f22a137806c))
+
 ### [0.0.6](https://github.com/AlephSF/gcp-cache/compare/v0.0.5...v0.0.6) (2020-04-10)
 
 
