@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/AlephSF/gcp-cache/compare/v0.0.8...v0.0.9) (2020-04-16)
+
+
+### Bug Fixes
+
+* **invalidation:** Errant ternary ([e4d8a79](https://github.com/AlephSF/gcp-cache/commit/e4d8a7911c2451596d2ca992a1acb6b275d5c872))
+
 ### [0.0.8](https://github.com/AlephSF/gcp-cache/compare/v0.0.7...v0.0.8) (2020-04-16)
 
 
