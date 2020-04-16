@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/AlephSF/gcp-cache/compare/v0.0.7...v0.0.8) (2020-04-16)
+
+
+### Bug Fixes
+
+* **invalidation:** Clear home page on post save ([1c6e54a](https://github.com/AlephSF/gcp-cache/commit/1c6e54a8b110d3e50bdfcf3e9a286c464b327f49))
+
 ### [0.0.7](https://github.com/AlephSF/gcp-cache/compare/v0.0.6...v0.0.7) (2020-04-16)
 
 
