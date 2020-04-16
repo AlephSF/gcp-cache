@@ -59,7 +59,7 @@ class Gcp_Cache_Headers {
 	public function set_cache_headers( $headers ) {
 		$front_end_cache_time = GCP_CACHE_SECONDS ?: 600;
 		global $post;
-		$do_not_cache = get_post_meta($post->ID, '_gcp_do_not_cache', true);
+		$do_not_cache = is_object($post) && $post->ID ? get_post_meta($post->ID, '_gcp_do_not_cache', true) : true;
 
 		if (is_admin() || is_user_logged_in() || $post->post_password || $do_not_cache) {
 			header('Cache-Control: no-cache, must-revalidate, max-age=0');
