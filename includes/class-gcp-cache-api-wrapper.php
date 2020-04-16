@@ -78,7 +78,24 @@ class Gcp_Cache_Api_Wrapper {
 	 * @since    1.0.0
 	 */
 	public function clear_path_cache($post_id, $post, $update) {
-		if(!$update){
+		$post_types_to_clear = ['post', 'page'];
+
+		// get all public post types, we'll want to clear these
+		$cpt_args = array(
+			'public'                => true,
+			'exclude_from_search'   => false,
+			'_builtin'              => false
+		);
+
+		$public_cpts = get_post_types($cpt_args,'names','and');
+
+		if(isset($public_cpts) && $public_cpts && is_array($public_cpts)){
+			foreach ($public_cpts as $cpt) {
+				array_push($post_types_to_clear, $cpt);
+			}
+		}
+
+		if(!$update || !in_array($post->post_type, $post_types_to_clear)){
 			return;
 		}
 		$url_map_name = get_option('gcp_cache_url_map_name');
