@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/AlephSF/gcp-cache/compare/v0.0.9...v0.0.10) (2020-05-20)
+
+
+### Features
+
+* **users:** Add crazy workaround for authed users ([4053dd8](https://github.com/AlephSF/gcp-cache/commit/4053dd83157d1b3880d10caeba3e1b24696ccbfa))
+
 ### [0.0.9](https://github.com/AlephSF/gcp-cache/compare/v0.0.8...v0.0.9) (2020-04-16)
 
 
