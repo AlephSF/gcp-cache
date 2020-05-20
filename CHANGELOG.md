@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.14](https://github.com/AlephSF/gcp-cache/compare/v0.0.13...v0.0.14) (2020-05-20)
+
+
+### Bug Fixes
+
+* **user:** Add front end JS login check ([1701983](https://github.com/AlephSF/gcp-cache/commit/170198317f850cd87b3429af51d86e103fef44c7))
+
 ### [0.0.13](https://github.com/AlephSF/gcp-cache/compare/v0.0.12...v0.0.13) (2020-05-20)
 
 ### [0.0.12](https://github.com/AlephSF/gcp-cache/compare/v0.0.10...v0.0.12) (2020-05-20)
