@@ -4,7 +4,7 @@
  * Anything having to do with the Google API Wrapper
  *
  * @link       https://alephsf.com
- * @since      1.0.0
+ * @since      0.0.1
  *
  * @package    Gcp_Cache
  */
@@ -24,7 +24,7 @@ class Gcp_Cache_Api_Wrapper {
 	/**
 	 * The ID of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   private
 	 * @var      string    $plugin_name    The ID of this plugin.
 	 */
@@ -33,7 +33,7 @@ class Gcp_Cache_Api_Wrapper {
 	/**
 	 * The version of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   private
 	 * @var      string    $version    The current version of this plugin.
 	 */
@@ -42,7 +42,7 @@ class Gcp_Cache_Api_Wrapper {
 	/**
 	 * Initialize the class and set its properties.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
@@ -60,7 +60,7 @@ class Gcp_Cache_Api_Wrapper {
 	/**
 	 * Set cache header time
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 */
 	private function get_url_map_name() {
 		$results = $this->service->urlMaps->listUrlMaps(GCP_CACHE_PROJECT);
@@ -75,7 +75,7 @@ class Gcp_Cache_Api_Wrapper {
 	/**
 	 * Set cache header time
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 */
 	public function clear_path_cache($post_id, $post, $update) {
 		$post_types_to_clear = ['post', 'page'];

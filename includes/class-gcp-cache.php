@@ -7,7 +7,7 @@
  * public-facing side of the site and the admin area.
  *
  * @link       https://alephsf.com
- * @since      1.0.0
+ * @since      0.0.1
  *
  * @package    Gcp_Cache
  * @subpackage Gcp_Cache/includes
@@ -22,7 +22,7 @@
  * Also maintains the unique identifier of this plugin as well as the current
  * version of the plugin.
  *
- * @since      1.0.0
+ * @since      0.0.1
  * @package    Gcp_Cache
  * @subpackage Gcp_Cache/includes
  * @author     Matt Glaser <ping@alephsf.com>
@@ -33,7 +33,7 @@ class Gcp_Cache {
 	 * The loader that's responsible for maintaining and registering all hooks that power
 	 * the plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   protected
 	 * @var      Gcp_Cache_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
@@ -42,7 +42,7 @@ class Gcp_Cache {
 	/**
 	 * The unique identifier of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   protected
 	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
 	 */
@@ -51,7 +51,7 @@ class Gcp_Cache {
 	/**
 	 * The current version of the plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   protected
 	 * @var      string    $version    The current version of the plugin.
 	 */
@@ -64,13 +64,13 @@ class Gcp_Cache {
 	 * Load the dependencies, define the locale, and set the hooks for the admin area and
 	 * the public-facing side of the site.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 */
 	public function __construct() {
 		if ( defined( 'GCP_CACHE_VERSION' ) ) {
 			$this->version = GCP_CACHE_VERSION;
 		} else {
-			$this->version = '1.0.0';
+			$this->version = '0.0.1';
 		}
 		$this->plugin_name = 'gcp-cache';
 
@@ -78,6 +78,7 @@ class Gcp_Cache {
 		$this->set_locale();
 		$this->define_header_hooks();
 		$this->define_api_hooks();
+		$this->define_user_hooks();
 	}
 
 	/**
@@ -93,7 +94,7 @@ class Gcp_Cache {
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   private
 	 */
 	private function load_dependencies() {
@@ -120,6 +121,13 @@ class Gcp_Cache {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-gcp-cache-api-wrapper.php';
 
+
+		/**
+		 * The class responsible for user cache and cachebusting administration.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-gcp-cache-user.php';
+
+
 		$this->loader = new Gcp_Cache_Loader();
 
 	}
@@ -130,7 +138,7 @@ class Gcp_Cache {
 	 * Uses the Gcp_Cache_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   private
 	 */
 	private function set_locale() {
@@ -145,7 +153,7 @@ class Gcp_Cache {
 	 * Register all of the hooks related to the admin area functionality
 	 * of the plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   private
 	 */
 	private function define_header_hooks() {
@@ -159,7 +167,7 @@ class Gcp_Cache {
 	 * Register all of the hooks related to the admin area functionality
 	 * of the plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   private
 	 */
 	private function define_api_hooks() {
@@ -169,10 +177,25 @@ class Gcp_Cache {
 		$this->loader->add_action('save_post', $plugin_api , 'clear_path_cache', 10, 3);	
 	}
 
+
+	/**
+	 * Register all of the hooks related to breaking cache for logged-in users
+	 *
+	 * @since    0.0.1
+	 * @access   private
+	 */
+	private function define_user_hooks() {
+
+		$plugin_user = new Gcp_Cache_User( $this->get_plugin_name(), $this->get_version() );
+	
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_user, 'enqueue_scripts' );
+		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_user, 'enqueue_scripts' );
+	}
+
 	/**
 	 * Run the loader to execute all of the hooks with WordPress.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 */
 	public function run() {
 		$this->loader->run();
@@ -182,7 +205,7 @@ class Gcp_Cache {
 	 * The name of the plugin used to uniquely identify it within the context of
 	 * WordPress and to define internationalization functionality.
 	 *
-	 * @since     1.0.0
+	 * @since     0.0.1
 	 * @return    string    The name of the plugin.
 	 */
 	public function get_plugin_name() {
@@ -192,7 +215,7 @@ class Gcp_Cache {
 	/**
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
-	 * @since     1.0.0
+	 * @since     0.0.1
 	 * @return    Gcp_Cache_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
@@ -202,7 +225,7 @@ class Gcp_Cache {
 	/**
 	 * Retrieve the version number of the plugin.
 	 *
-	 * @since     1.0.0
+	 * @since     0.0.1
 	 * @return    string    The version number of the plugin.
 	 */
 	public function get_version() {

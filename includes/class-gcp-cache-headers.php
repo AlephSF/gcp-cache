@@ -4,7 +4,7 @@
  * Anything having to do with php headers and cache control.
  *
  * @link       https://alephsf.com
- * @since      1.0.0
+ * @since      0.0.1
  *
  * @package    Gcp_Cache
  */
@@ -22,7 +22,7 @@ class Gcp_Cache_Headers {
 	/**
 	 * The ID of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   private
 	 * @var      string    $plugin_name    The ID of this plugin.
 	 */
@@ -31,7 +31,7 @@ class Gcp_Cache_Headers {
 	/**
 	 * The version of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @access   private
 	 * @var      string    $version    The current version of this plugin.
 	 */
@@ -40,7 +40,7 @@ class Gcp_Cache_Headers {
 	/**
 	 * Initialize the class and set its properties.
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
@@ -54,7 +54,7 @@ class Gcp_Cache_Headers {
 	/**
 	 * Set cache header time
 	 *
-	 * @since    1.0.0
+	 * @since    0.0.1
 	 */
 	public function set_cache_headers( $headers ) {
 		$front_end_cache_time = GCP_CACHE_SECONDS ?: 600;

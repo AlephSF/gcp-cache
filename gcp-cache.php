@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://alephsf.com
- * @since             1.0.0
+ * @since             0.0.1
  * @package           Gcp_Cache
  *
  * @wordpress-plugin
  * Plugin Name:       Google Cloud Project Cache
  * Plugin URI:        https://alephsf.com
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
+ * Version:           0.0.1
  * Author:            Matt Glaser
  * Author URI:        https://alephsf.com
  * License:           GPL-2.0+
@@ -32,10 +32,10 @@ if ( ! defined( 'WPINC' ) ) {
 
 /**
  * Currently plugin version.
- * Start at version 1.0.0 and use SemVer - https://semver.org
+ * Start at version 0.0.1 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'GCP_CACHE_VERSION', '1.0.0' );
+define( 'GCP_CACHE_VERSION', '0.0.1' );
 
 /**
  * The code that runs during plugin activation.
@@ -71,7 +71,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-gcp-cache.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.0.0
+ * @since    0.0.1
  */
 function run_gcp_cache() {
 	if ( defined('GOOGLE_APPLICATION_CREDENTIALS') && defined('GCP_CACHE_MAP_NAME_FRAGMENT') && defined('GCP_CACHE_PROJECT')){
