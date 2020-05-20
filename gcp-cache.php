@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 0.0.1 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'GCP_CACHE_VERSION', '0.0.13' );
+define( 'GCP_CACHE_VERSION', '0.0.14' );
 
 /**
  * The code that runs during plugin activation.
