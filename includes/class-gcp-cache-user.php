@@ -59,8 +59,10 @@ class Gcp_Cache_User {
 	 */
 	public function enqueue_scripts() {
 
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/gcp-cache-user-check.js', array( 'jquery' ), $this->version, false );
+
 		if(is_user_logged_in()){
-			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/gcp-cache-user-logged-in.js', array( 'jquery' ), $this->version, false );
+			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/gcp-cache-user-logged-in.js', null, $this->version, false );
 		} else {
 			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/gcp-cache-user-logged-out.js', null, $this->version, false );
 		}
