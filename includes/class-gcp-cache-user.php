@@ -4,7 +4,7 @@
  * Anything having to do with user caches
  *
  * @link       https://alephsf.com
- * @since      0.0.1
+ * @since      0.0.10
  *
  * @package    Gcp_Cache
  */
@@ -55,7 +55,7 @@ class Gcp_Cache_User {
 		/**
 	 * Register the JavaScript that sets or unsets localstorage if user is logged in or out.
 	 *
-	 * @since    0.0.1
+	 * @since    0.0.10
 	 */
 	public function enqueue_scripts() {
 

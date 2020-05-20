@@ -181,7 +181,7 @@ class Gcp_Cache {
 	/**
 	 * Register all of the hooks related to breaking cache for logged-in users
 	 *
-	 * @since    0.0.1
+	 * @since    0.0.10
 	 * @access   private
 	 */
 	private function define_user_hooks() {
