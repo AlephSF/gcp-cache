@@ -188,7 +188,8 @@ class Gcp_Cache {
 
 		$plugin_user = new Gcp_Cache_User( $this->get_plugin_name(), $this->get_version() );
 	
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_user, 'enqueue_scripts' );
+		$this->loader->add_action( 'wp_login', $plugin_user, 'set_cache_bust_login_cookie' );
+		$this->loader->add_action( 'wp_logout', $plugin_user, 'clear_cache_bust_login_cookie' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_user, 'enqueue_scripts' );
 	}
 
