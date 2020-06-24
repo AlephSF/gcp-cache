@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/AlephSF/gcp-cache/compare/v0.0.14...v0.0.11) (2020-06-24)
+
+
+### Features
+
+* **user:** Bust cache for logged in users ([f357e3d](https://github.com/AlephSF/gcp-cache/commit/f357e3db9d7ff0c0d8903bb224baaf81bbfb0c99))
+
 ### [0.0.10](https://github.com/AlephSF/gcp-cache/compare/v0.0.9...v0.0.10) (2020-05-20)
 
 
