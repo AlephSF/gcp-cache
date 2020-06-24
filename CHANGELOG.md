@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.15](https://github.com/AlephSF/gcp-cache/compare/v0.0.11...v0.0.15) (2020-06-24)
+
 ### [0.0.11](https://github.com/AlephSF/gcp-cache/compare/v0.0.14...v0.0.11) (2020-06-24)
 
 
