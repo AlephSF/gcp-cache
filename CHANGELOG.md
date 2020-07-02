@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.16](https://github.com/AlephSF/gcp-cache/compare/v0.0.15...v0.0.16) (2020-07-02)
+
+
+### Bug Fixes
+
+* **cachebuster:** Don't add param to hash hrefs ([d184550](https://github.com/AlephSF/gcp-cache/commit/d184550ceec81a19450d59ee02a150fe35f31cf2))
+
 ### [0.0.15](https://github.com/AlephSF/gcp-cache/compare/v0.0.11...v0.0.15) (2020-06-24)
 
 ### [0.0.11](https://github.com/AlephSF/gcp-cache/compare/v0.0.14...v0.0.11) (2020-06-24)
