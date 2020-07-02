@@ -21,7 +21,7 @@ jQuery(function() {
       //Remove cache busting query parameter from URL bar
       window.history.replaceState({}, '', currentUrl.replace('?' + queryParam, '').replace('&' + queryParam, ''));
       var siteURL = window.location.host.toString();
-      jQuery('body').not('.wp-admin').find("a[href^='http://"+siteURL+"'], a[href^='https://"+siteURL+"'], a[href^='/'], a[href^='./'], a[href^='../'], a[href^='#']").attr("href", function(i, href) {
+      jQuery('body').not('.wp-admin').find("a[href^='http://"+siteURL+"'], a[href^='https://"+siteURL+"'], a[href^='/']").attr("href", function(i, href) {
 
         if (jQuery(this).parents('#wpadminbar').length) {
           return href;
