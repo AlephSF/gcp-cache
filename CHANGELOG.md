@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/AlephSF/gcp-cache/compare/v0.0.16...v0.0.17) (2021-02-12)
+
+
+### Bug Fixes
+
+* Remove cache invalidation ([8b85bb6](https://github.com/AlephSF/gcp-cache/commit/8b85bb6df21bb1cf4e45cd400839cc4027eb7aae))
+
 ### [0.0.16](https://github.com/AlephSF/gcp-cache/compare/v0.0.15...v0.0.16) (2020-07-02)
 
 
