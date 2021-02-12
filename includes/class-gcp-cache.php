@@ -172,9 +172,9 @@ class Gcp_Cache {
 	 */
 	private function define_api_hooks() {
 
-		$plugin_api = new Gcp_Cache_Api_Wrapper( $this->get_plugin_name(), $this->get_version() );
+		// $plugin_api = new Gcp_Cache_Api_Wrapper( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action('save_post', $plugin_api , 'clear_path_cache', 10, 3);	
+		// $this->loader->add_action('save_post', $plugin_api , 'clear_path_cache', 10, 3);	
 	}
 
 
