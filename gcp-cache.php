@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 0.0.1 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'GCP_CACHE_VERSION', '0.0.16' );
+define( 'GCP_CACHE_VERSION', '0.0.18' );
 
 /**
  * The code that runs during plugin activation.
@@ -74,7 +74,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-gcp-cache.php';
  * @since    0.0.1
  */
 function run_gcp_cache() {
-	if ( defined('GOOGLE_APPLICATION_CREDENTIALS') && defined('GCP_CACHE_MAP_NAME_FRAGMENT') && defined('GCP_CACHE_PROJECT')){
+	if ( defined('GOOGLE_APPLICATION_CREDENTIALS')){
 		$plugin = new Gcp_Cache();
 		$plugin->run();
 	}
