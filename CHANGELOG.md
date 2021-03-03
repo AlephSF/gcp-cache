@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.20](https://github.com/AlephSF/gcp-cache/compare/v0.0.19...v0.0.20) (2021-03-03)
+
+
+### Bug Fixes
+
+* Add default cache time ([3b7478c](https://github.com/AlephSF/gcp-cache/commit/3b7478cedccd0447aee40a9e5f68fcfdb8517e39))
+
 ### [0.0.19](https://github.com/AlephSF/gcp-cache/compare/v0.0.18...v0.0.19) (2021-03-03)
 
 

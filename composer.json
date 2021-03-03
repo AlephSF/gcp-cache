@@ -1,7 +1,7 @@
 {
     "name": "alephsf/gcp-cache",
     "description": "WordPress Plugin for using the Google Cloud CDN Cache",
-    "version": "0.0.19",
+    "version": "0.0.20",
     "authors": [
         {
             "name": "Matt Glaser",
