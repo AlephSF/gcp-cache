@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.19](https://github.com/AlephSF/gcp-cache/compare/v0.0.18...v0.0.19) (2021-03-03)
+
+
+### Bug Fixes
+
+* Remove dependency on google app credentials ([1b9751b](https://github.com/AlephSF/gcp-cache/commit/1b9751b4525687640162009c58b250c220e59820))
+
 ### [0.0.18](https://github.com/AlephSF/gcp-cache/compare/v0.0.17...v0.0.18) (2021-03-02)
 
 
